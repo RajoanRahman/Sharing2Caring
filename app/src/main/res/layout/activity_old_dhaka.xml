@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ExpnadablePlaceName.OldDhaka">
+
+    <android.support.v7.widget.CardView
+        android:layout_margin="30dp"
+        app:cardElevation="10dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="350dp">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <EditText
+
+                android:id="@+id/oldDhaka_ride_about"
+                android:hint="Write about your ride"
+                android:inputType="textMultiLine"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <EditText
+                android:id="@+id/oldDhaka_ride_location"
+                android:hint="Exact Location"
+                android:inputType="textMultiLine"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/oldDhaka_ride_time"
+                android:hint="Time"
+                android:inputType="textMultiLine"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/oldDhaka_ride_phone"
+                android:hint="Phone number"
+                android:inputType="phone"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <Button
+                android:id="@+id/oldDhaka_ride_post_button"
+                android:layout_gravity="center"
+                android:text="Post"
+                android:textColor="#ffffff"
+                android:background="@drawable/button_size"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

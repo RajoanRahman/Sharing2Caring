@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1045466892939",
+    "firebase_url": "https://sharingcaring-daae9.firebaseio.com",
+    "project_id": "sharingcaring-daae9",
+    "storage_bucket": "sharingcaring-daae9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1045466892939:android:9e7201fa82d83f0b",
+        "android_client_info": {
+          "package_name": "com.example.user.sharingcaring"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1045466892939-9ii83il0702ki0faeousndjchdvu0lh9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.user.sharingcaring",
+            "certificate_hash": "4106edaa89d6c9c33af285d458bb7a10fb290fa9"
+          }
+        },
+        {
+          "client_id": "1045466892939-kldbj8r26qceds4eghdilpkt64tpt6ei.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHtrROJGr_j6zn4-jiTkypIb6FT-c05og"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1045466892939-kldbj8r26qceds4eghdilpkt64tpt6ei.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

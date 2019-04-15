@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.user.sharingcaring">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity" />
+        <activity android:name=".FragmentActivities.WelcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".LogInActivity" />
+        <activity android:name=".RegisterActvity" />
+        <activity android:name=".FragmentActivities.UserProfile" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity android:name=".PostActivities.BookPostActivity" />
+        <activity
+            android:name=".PostActivities.BloodPostActivity"
+            android:parentActivityName=".FragmentActivities.WelcomeActivity" />
+        <activity android:name=".PostActivities.TutorPostActivity" />
+        <activity
+            android:name=".MainPostsActivities.Book"
+            android:parentActivityName=".FragmentActivities.WelcomeActivity" />
+        <activity
+            android:name=".MainPostsActivities.Blood"
+            android:parentActivityName=".FragmentActivities.WelcomeActivity" />
+        <activity
+            android:name=".MainPostsActivities.Tutor"
+            android:parentActivityName=".FragmentActivities.WelcomeActivity" />
+        <activity
+            android:name=".MainPostsActivities.RideShare"
+            android:parentActivityName=".FragmentActivities.WelcomeActivity" />
+        <activity
+            android:name=".PostActivities.RideSharePostActivity"
+            android:parentActivityName=".FragmentActivities.WelcomeActivity" />
+        <activity
+            android:name=".Category.Department_Book_categorry"
+            android:parentActivityName=".FragmentActivities.WelcomeActivity" />
+        <activity
+            android:name=".Category.Blood_Category"
+            android:parentActivityName=".FragmentActivities.WelcomeActivity" />
+        <activity
+            android:name=".MainPostsActivities.Donate"
+            android:parentActivityName=".FragmentActivities.WelcomeActivity" />
+        <activity android:name=".PostActivities.DonatePostActivity" />
+        <activity android:name=".ClickPostActivity" />
+        <activity android:name=".AccountSettingsActivity" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".CommentActivity" />
+        <activity android:name=".DonationActivity" />
+        <activity
+            android:name=".BookCategoriesActivity.MarketingEconomicsActivity"
+            android:parentActivityName=".FragmentActivities.WelcomeActivity" />
+        <activity
+            android:name=".BookCategoriesActivity.ElectricalComputerActivity"
+            android:parentActivityName=".FragmentActivities.WelcomeActivity" />
+        <activity
+            android:name=".BookCategoriesActivity.PharmacyActivity"
+            android:parentActivityName=".FragmentActivities.WelcomeActivity" />
+        <activity android:name=".BookCategoriesActivity.EnglishActivity" />
+        <activity android:name=".PostActivities.EEECSEPostActivity" />
+        <activity android:name=".PostActivities.PharamacyPostActivity" />
+        <activity android:name=".PostActivities.MarketingEcoPostAtivity" />
+        <activity
+            android:name=".BloodCategories.Apositive"
+            android:parentActivityName=".Category.Blood_Category" />
+        <activity
+            android:name=".BloodCategories.ABpositive"
+            android:parentActivityName=".Category.Blood_Category" />
+        <activity
+            android:name=".BloodCategories.Opositive"
+            android:parentActivityName=".Category.Blood_Category" />
+        <activity
+            android:name=".BloodCategories.Onegative"
+            android:parentActivityName=".Category.Blood_Category" />
+        <activity
+            android:name=".BloodCategories.Bpositive"
+            android:parentActivityName=".Category.Blood_Category" />
+        <activity
+            android:name=".BloodCategories.Bnegative"
+            android:parentActivityName=".Category.Blood_Category" />
+        <activity android:name=".PostActivities.AbloodPostActivty" />
+        <activity android:name=".PostActivities.ABbloodPostActivtiy" />
+        <activity android:name=".PostActivities.BPosBloodPostActivity" />
+        <activity android:name=".PostActivities.BNegBloodPostActivity" />
+        <activity android:name=".PostActivities.OposBloodPostActivty" />
+        <activity android:name=".PostActivities.OnegBloodPostActivty" />
+        <activity
+            android:name=".NsuAllClubs"
+            android:parentActivityName=".FragmentActivities.WelcomeActivity" />
+        <activity android:name=".PostActivities.ClubPostActivty" />
+        <activity android:name=".ExpandableDepartmentName.Department_Category_List_Activty" />
+        <activity android:name=".ExpnadablePlaceName.WhereToGoActivity" />
+        <activity android:name=".ExpnadablePlaceName.Mirpur" />
+        <activity android:name=".ExpnadablePlaceName.Uttara" />
+        <activity android:name=".ExpnadablePlaceName.Dhanmondi" />
+        <activity android:name=".ExpnadablePlaceName.OldDhaka" />
+        <activity android:name=".ExpnadablePlaceName.Jatrabari" />
+        <activity
+            android:name=".MainPostsActivities.DhanmondiRidePosts"
+            android:parentActivityName=".ExpnadablePlaceName.WhereToGoActivity" />
+        <activity
+            android:name=".MainPostsActivities.JatrabariRidePosts"
+            android:parentActivityName=".ExpnadablePlaceName.WhereToGoActivity" />
+        <activity
+            android:name=".MainPostsActivities.MirpurRidePosts"
+            android:parentActivityName=".ExpnadablePlaceName.WhereToGoActivity" />
+        <activity
+            android:name=".MainPostsActivities.UttoraRidePosts"
+            android:parentActivityName=".ExpnadablePlaceName.WhereToGoActivity" />
+        <activity
+            android:name=".MainPostsActivities.OldDhakaRidePost"
+            android:parentActivityName=".ExpnadablePlaceName.WhereToGoActivity" />
+        <activity android:name=".ClickPostActivityForDelete.MarketingBookDelete" />
+        <activity android:name=".ClickPostActivityForDelete.PharmacyBookDelete" />
+        <activity android:name=".ClickPostActivityForDelete.ABloodDelete" />
+        <activity android:name=".ClickPostActivityForDelete.ABbloodeDelete" />
+        <activity android:name=".ClickPostActivityForDelete.BnegBloodDelete" />
+        <activity android:name=".ClickPostActivityForDelete.BPositiveDelete" />
+        <activity android:name=".ClickPostActivityForDelete.OnegativeDelete" />
+        <activity android:name=".ClickPostActivityForDelete.OpositiveDelete" />
+        <activity android:name=".ClickPostActivityForDelete.TutorDeletePost" />
+        <activity android:name=".ClickPostActivityForDelete.DonateDeletePost"></activity>
+    </application>
+
+</manifest>

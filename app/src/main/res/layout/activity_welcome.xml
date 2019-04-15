@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    tools:context=".FragmentActivities.WelcomeActivity">
+
+    <include
+        android:id="@+id/welcome_bar"
+        layout="@layout/app_bar_layout"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/books_cardView"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_width="150dp"
+            android:elevation="10dp"
+            app:cardCornerRadius="10dp"
+            android:layout_height="150dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="55dp"
+                    android:src="@drawable/book_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="45dp"
+                    android:textSize="25dp"
+                    android:textColor="#FF000000"
+                    android:text="Books"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            app:cardCornerRadius="10dp"
+            android:id="@+id/blood_card_view"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:layout_width="150dp"
+            android:elevation="10dp"
+            android:layout_height="150dp">
+
+            <LinearLayout
+
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="55dp"
+                    android:src="@drawable/blood_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="45dp"
+                    android:textSize="25dp"
+                    android:textColor="#FF000000"
+                    android:text="Blood"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+
+        <android.support.v7.widget.CardView
+            app:cardCornerRadius="10dp"
+            android:id="@+id/tutor_card_view"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="30dp"
+            android:layout_width="150dp"
+            android:elevation="10dp"
+            android:layout_height="150dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="55dp"
+                    android:src="@drawable/tutor_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="45dp"
+                    android:textSize="25dp"
+                    android:textColor="#FF000000"
+                    android:text="Tutor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            app:cardCornerRadius="10dp"
+            android:id="@+id/club_card_view"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="40dp"
+            android:layout_width="150dp"
+            android:elevation="10dp"
+            android:layout_height="150dp">
+
+            <LinearLayout
+
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="55dp"
+                    android:src="@drawable/club_act"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="45dp"
+                    android:textSize="25dp"
+                    android:textColor="#FF000000"
+                    android:text="Clubs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_marginTop="1dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/ride_share"
+            android:elevation="10dp"
+            app:cardCornerRadius="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp">
+
+            <ImageView
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="55dp"
+                android:src="@drawable/ridetwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginTop="80dp"
+                android:layout_marginLeft="20dp"
+                android:textSize="25dp"
+                android:textColor="#FF000000"
+                android:text="Ride Share"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/donate_share"
+            android:elevation="10dp"
+            app:cardCornerRadius="10dp"
+            android:layout_marginLeft="40dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp">
+
+            <ImageView
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="50dp"
+                android:src="@drawable/helpone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginTop="80dp"
+                android:layout_marginLeft="40dp"
+                android:textSize="25dp"
+                android:textColor="#FF000000"
+                android:text="Donate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </android.support.v7.widget.CardView>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

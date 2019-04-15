@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PostActivities.ABbloodPostActivtiy">
+
+
+    <android.support.v7.widget.CardView
+        android:layout_margin="30dp"
+        app:cardElevation="10dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="400dp">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <EditText
+
+                android:id="@+id/ab_blood_about"
+                android:hint="About"
+                android:inputType="textMultiLine"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+
+            <EditText
+                android:id="@+id/ab_blood_group"
+                android:hint="AB positive Blood Group"
+                android:inputType="textMultiLine"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <EditText
+                android:id="@+id/ab_blood_needed"
+                android:hint="When Needed"
+                android:inputType="textMultiLine"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/ab_blood_location"
+                android:hint="Location"
+                android:inputType="textMultiLine"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/ab_blood_phoneNumber"
+                android:hint="Phone Number"
+                android:inputType="phone"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <Button
+                android:id="@+id/ab_blood_post_button"
+                android:layout_gravity="center"
+                android:text="Post"
+                android:textColor="#ffffff"
+                android:background="@drawable/button_size"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>

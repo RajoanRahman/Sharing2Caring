@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">Sharing2Caring</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="one">
+        নর্থ সাউথ বিশ্ববিদ্যালয় সোশ্যাল সার্ভিসেস ক্লাব প্রতিবছরের মতো এবারো তীব্র শীতে জর্জরিত অসহায়,
+        দরিদ্র মানুষের পাশে দাঁড়িয়েছে। আপনিও সাহায্যের হাত বাড়িয়ে দিন আর্থিক সহায়ওতা করে।
+
+
+
+    </string>
+
+
+    <string name="two">
+        We are delighted to inform all those social heroes who had donated blood in the last Blood Donation Drive,
+        that we have got all the blood test reports in hand.
+
+    </string>
+
+    <string name="three">
+
+        ইমার্জেন্সি ব্লাড লাগবে\n
+        ৫ বছরের শিশু,থ্যালাসেমিয়ায় আক্রান্ত।এখনো ব্লাড মিলেনি।\n
+        গ্রুপঃ AB+,এক ব্যাগ\n
+        স্থানঃপিজি হাসপাতাল\n
+        ফোনঃ 01797518358\n
+    </string>
+
+    <string name="four">
+        Tutor wanted.
+        Class: 10\n
+        Subject: Math and English\n
+        3 days a week.\n
+        Location: Mirpur Dohs, Dhaka
+
+
+    </string>
+
+
+    <string name="five">
+        Need male tutor !!
+Class 9
+Commerce
+Salary: 4000-4500
+
+Location : vatara, notunbazar
+Contact: 01677193383
+
+    </string>
+</resources>

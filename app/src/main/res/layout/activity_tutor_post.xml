@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PostActivities.TutorPostActivity">
+
+
+    <android.support.v7.widget.CardView
+        android:layout_margin="30dp"
+        app:cardElevation="10dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="400dp">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <EditText
+
+                android:id="@+id/about_tuition"
+                android:hint="About"
+                android:inputType="textMultiLine"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+
+            <EditText
+                android:id="@+id/subjectclass"
+                android:hint="Subject/Class"
+                android:inputType="textMultiLine"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <EditText
+                android:id="@+id/tutor_salary"
+                android:hint="Salary"
+                android:inputType="textMultiLine"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/tutor_location"
+                android:hint="Location"
+                android:inputType="textMultiLine"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/tutor_phoneNumber"
+                android:hint="Phone Number"
+                android:inputType="phone"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <Button
+                android:id="@+id/post_button"
+                android:layout_gravity="center"
+                android:text="Post"
+                android:textColor="#ffffff"
+                android:background="@drawable/button_size"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

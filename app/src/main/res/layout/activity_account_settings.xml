@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AccountSettingsActivity">
+
+    <include
+        layout="@layout/app_bar_layout"
+        android:id="@+id/accountSettignBar"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:src="@drawable/userprofile"
+        android:id="@+id/user_profile_circle_image"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/accountSettignBar"
+        android:layout_width="200dp"
+        android:layout_height="200dp" />
+
+   <!-- <EditText
+
+        android:id="@+id/user_status_edit_text"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/background_dark"
+        android:layout_marginTop="10dp"
+        android:hint="User Status"
+        android:layout_marginRight="40dp"
+        android:inputType="textMultiLine"
+        android:layout_marginLeft="40dp"
+        android:layout_below="@id/user_profile_circle_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />-->
+
+    <EditText
+
+        android:id="@+id/user_profileName_edit_text"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/background_dark"
+        android:layout_marginTop="10dp"
+        android:hint="User Name"
+        android:layout_marginRight="20dp"
+        android:inputType="textMultiLine"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/user_profile_circle_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+
+        android:id="@+id/user_cellNo_edit_text"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/background_dark"
+        android:layout_marginTop="10dp"
+        android:hint="Phone number"
+        android:layout_marginRight="20dp"
+        android:inputType="textMultiLine"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/user_profileName_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+
+        android:id="@+id/user_address_edit_text"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/background_dark"
+        android:layout_marginTop="10dp"
+        android:hint="Address"
+        android:layout_marginRight="20dp"
+        android:inputType="textMultiLine"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/user_cellNo_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <Button
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="#ffffff"
+        android:text="Update"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/user_address_edit_text"
+        android:id="@+id/user_accnt_update_button"
+        android:background="@drawable/button_size"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>
