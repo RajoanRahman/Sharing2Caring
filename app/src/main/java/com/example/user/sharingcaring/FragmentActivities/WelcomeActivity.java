@@ -9,6 +9,8 @@ import android.support.v7.widget.CardView;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 import android.support.v7.widget.Toolbar;
 
@@ -40,7 +42,7 @@ public class WelcomeActivity extends AppCompatActivity{
     CardView books,blood,tutor,clubs,ride,donate;
     FirebaseAuth mAuth;
     FirebaseUser currentUser;
-
+    Animation anim,anim2;
     Toolbar toolbar;
 
     private DatabaseReference userRef;
@@ -51,7 +53,7 @@ public class WelcomeActivity extends AppCompatActivity{
 
         toolbar=findViewById(R.id.welcome_bar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Welcome");
+        //getSupportActionBar().setTitle(" ");
 
         mAuth=FirebaseAuth.getInstance();
 
@@ -59,12 +61,23 @@ public class WelcomeActivity extends AppCompatActivity{
         //Under this "User"  node, every data of user will be saved
         userRef=FirebaseDatabase.getInstance().getReference().child("Users");
 
+        anim=AnimationUtils.loadAnimation(this,R.anim.animforbutton);
+        anim2=AnimationUtils.loadAnimation(this,R.anim.animforbuttontwo);
+
         books=findViewById(R.id.books_cardView);
         blood=findViewById(R.id.blood_card_view);
         tutor=findViewById(R.id.tutor_card_view);
         clubs=findViewById(R.id.club_card_view);
         ride=findViewById(R.id.ride_share);
         donate=findViewById(R.id.donate_share);
+
+        books.startAnimation(anim2);
+        tutor.startAnimation(anim2);
+        ride.startAnimation(anim2);
+
+        blood.startAnimation(anim);
+        clubs.startAnimation(anim);
+        donate.startAnimation(anim);
 
         books.setOnClickListener(new View.OnClickListener() {
             @Override

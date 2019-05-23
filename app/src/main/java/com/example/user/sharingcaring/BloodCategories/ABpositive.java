@@ -85,6 +85,7 @@ public class ABpositive extends AppCompatActivity {
                         viewHolder.setProfileimage(model.getProfileimage());
                         viewHolder.setPhoneNumber(model.getPhoneNumber());
 
+
                         viewHolder.mView.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
@@ -92,10 +93,8 @@ public class ABpositive extends AppCompatActivity {
                                 Intent newIntent=new Intent(ABpositive.this,ABbloodeDelete.class);
                                 newIntent.putExtra("PostKey",postKey);
                                 startActivity(newIntent);
-
                             }
                         });
-
                     }
                 };
         abPosBloodPostList.setAdapter(firebaseRecyclerAdapter);

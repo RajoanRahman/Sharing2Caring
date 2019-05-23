@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.example.user.sharingcaring.Adapters.RideSharePostModel;
 import com.example.user.sharingcaring.CallDialgue;
+import com.example.user.sharingcaring.ClickPostActivityForDelete.DhanmondiDelete;
 import com.example.user.sharingcaring.ExpnadablePlaceName.Dhanmondi;
 import com.example.user.sharingcaring.PostActivities.RideSharePostActivity;
 import com.example.user.sharingcaring.R;
@@ -68,7 +69,9 @@ public class DhanmondiRidePosts extends AppCompatActivity {
                 new FirebaseRecyclerAdapter<RideSharePostModel, DhanmondiRidePostViewHolder>
                         (RideSharePostModel.class,R.layout.ride_share_post_layout,DhanmondiRidePostViewHolder.class,postRef) {
                     @Override
-                    protected void populateViewHolder(DhanmondiRidePostViewHolder viewHolder, final RideSharePostModel model, int position) {
+                    protected void populateViewHolder(DhanmondiRidePostViewHolder viewHolder, final RideSharePostModel model, final int position) {
+
+                        final String postKey=getRef(position).getKey();
 
                         viewHolder.setAboutRide(model.getAboutRide());
                         viewHolder.setRideTime(model.getRideTime());
@@ -82,10 +85,11 @@ public class DhanmondiRidePosts extends AppCompatActivity {
                         viewHolder.mView.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                Intent intent=new Intent(Intent.ACTION_DIAL);
-                                String number=model.getPhoneNumber().toString();
-                                intent.setData(Uri.parse("tel:"+number));
+
+                                Intent intent=new Intent(DhanmondiRidePosts.this,DhanmondiDelete.class);
+                                intent.putExtra("PostKey",postKey);
                                 startActivity(intent);
+
                             }
                         });
                     }

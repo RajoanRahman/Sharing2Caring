@@ -9,8 +9,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,6 +31,8 @@ public class LogInActivity extends AppCompatActivity {
     Button login;
     TextView register;
     EditText login_emailText,login_passwordText;
+    ImageView logoImage;
+    Animation anim1,anim2,anim3;
 
     private FirebaseAuth mAuth;
     private ProgressDialog loadingBar;
@@ -37,6 +42,10 @@ public class LogInActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
+        anim1=AnimationUtils.loadAnimation(this,R.anim.animforbuttontwo);
+        anim2=AnimationUtils.loadAnimation(this,R.anim.animforbuttontwo);
+        anim3=AnimationUtils.loadAnimation(this,R.anim.animforbutton);
+
         mAuth=FirebaseAuth.getInstance();
 
         loadingBar=new ProgressDialog(this);
@@ -45,7 +54,12 @@ public class LogInActivity extends AppCompatActivity {
         register=findViewById(R.id.register_text);
         login_emailText=findViewById(R.id.logIn_email);
         login_passwordText=findViewById(R.id.logIn_password);
+        logoImage=findViewById(R.id.nsu_logo);
 
+        logoImage.startAnimation(anim3);
+        login_emailText.startAnimation(anim1);
+        login_passwordText.startAnimation(anim1);
+        register.startAnimation(anim1);
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,6 +83,9 @@ public class LogInActivity extends AppCompatActivity {
 
         if(TextUtils.isEmpty(email)){
             Toast.makeText(LogInActivity.this,"Please write your email..",Toast.LENGTH_SHORT).show();
+            if(!email.contains("northsouth.edu")){
+                Toast.makeText(LogInActivity.this,"Please write your NSU email..",Toast.LENGTH_SHORT).show();
+            }
         }else if (TextUtils.isEmpty(pass)){
             Toast.makeText(LogInActivity.this,"Please write your password..",Toast.LENGTH_SHORT).show();
         }else {

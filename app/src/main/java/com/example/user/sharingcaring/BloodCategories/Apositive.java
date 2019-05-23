@@ -32,6 +32,7 @@ public class Apositive extends AppCompatActivity {
     FloatingActionButton floatingActionButton;
     RecyclerView aPosBloodPostList;
     DatabaseReference postRef;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +43,7 @@ public class Apositive extends AppCompatActivity {
         getSupportActionBar().setTitle("A Positive");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+
 
         postRef=FirebaseDatabase.getInstance().getReference().child("APositiveBloodPosts");
 

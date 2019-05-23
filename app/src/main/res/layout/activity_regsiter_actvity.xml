@@ -10,54 +10,61 @@
 
 
     <EditText
-        android:background="@drawable/email_box"
+        android:textColor="#ffffff"
+        android:paddingLeft="5dp"
+        android:background="@drawable/inside_deisgn"
         android:id="@+id/reg_email"
         android:drawableStart="@drawable/email"
         android:layout_marginTop="100dp"
-        android:layout_marginLeft="60dp"
-        android:hint="Email"
+        android:layout_marginLeft="45dp"
+        android:hint=".@northsouth.edu"
         android:textAlignment="center"
         android:textColorHint="#ffffff"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content" />
+        android:layout_width="320dp"
+        android:layout_height="45dp" />
 
     <EditText
+
+        android:textColor="#ffffff"
+        android:paddingLeft="5dp"
         android:inputType="numberPassword"
-        android:background="@drawable/password_box"
+        android:background="@drawable/inside_deisgn"
         android:id="@+id/reg_password"
         android:drawableStart="@drawable/pass"
         android:layout_marginTop="30dp"
-        android:layout_marginLeft="60dp"
+        android:layout_marginLeft="45dp"
         android:hint="Password"
         android:textAlignment="center"
         android:textColorHint="#ffffff"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content" />
+        android:layout_width="320dp"
+        android:layout_height="45dp" />
     <EditText
+        android:textColor="#ffffff"
+        android:paddingLeft="5dp"
         android:inputType="numberPassword"
-        android:background="@drawable/password_box"
+        android:background="@drawable/inside_deisgn"
         android:id="@+id/reg_confirm_password"
         android:drawableStart="@drawable/pass"
         android:layout_marginTop="30dp"
-        android:layout_marginLeft="60dp"
-        android:hint="Conform Password"
+        android:layout_marginLeft="45dp"
+        android:hint="Confirm Password"
         android:textAlignment="center"
         android:textColorHint="#ffffff"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content" />
+        android:layout_width="320dp"
+        android:layout_height="45dp" />
 
 
 
     <Button
 
         android:id="@+id/create_account_button"
-        android:fontFamily="@font/qualioitalic"
+        android:fontFamily="@font/semibold"
         android:textSize="20dp"
         android:textColor="#ffffff"
         android:text="Create Account"
-        android:background="#7A7171"
+        android:background="#d21e4e"
         android:layout_marginTop="40dp"
-        android:layout_marginLeft="60dp"
+        android:layout_marginLeft="55dp"
         android:layout_width="300dp"
         android:layout_height="wrap_content" />
 

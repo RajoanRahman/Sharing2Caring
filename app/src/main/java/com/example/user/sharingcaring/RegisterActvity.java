@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -26,6 +28,7 @@ public class RegisterActvity extends AppCompatActivity {
     private ProgressDialog loadingBar;
     private FirebaseAuth mAuth;
     FirebaseUser currentUser;
+    Animation anim;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,11 +37,14 @@ public class RegisterActvity extends AppCompatActivity {
         mAuth=FirebaseAuth.getInstance();
         loadingBar=new ProgressDialog(this);
 
+        anim=AnimationUtils.loadAnimation(this,R.anim.animforbutton);
+
         createAccount=findViewById(R.id.create_account_button);
         regConfirmPass=findViewById(R.id.reg_confirm_password);
         regEmail=findViewById(R.id.reg_email);
         regPass=findViewById(R.id.reg_password);
 
+        createAccount.startAnimation(anim);
 
         createAccount.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,13 +62,17 @@ public class RegisterActvity extends AppCompatActivity {
 
         if (TextUtils.isEmpty(email)){
             Toast.makeText(RegisterActvity.this,"Please write your email..",Toast.LENGTH_SHORT).show();
+
         }else if (TextUtils.isEmpty(password)){
             Toast.makeText(RegisterActvity.this,"Please write your password..",Toast.LENGTH_SHORT).show();
         }else if (TextUtils.isEmpty(confirmPass)){
             Toast.makeText(RegisterActvity.this,"Please confirm your password..",Toast.LENGTH_SHORT).show();
         }else if (!password.equals(confirmPass)){
             Toast.makeText(RegisterActvity.this,"Password do  not match",Toast.LENGTH_SHORT).show();
-        }else {
+        }else if (!email.contains("@northsouth.edu")){
+            Toast.makeText(RegisterActvity.this,"Please write your NSU email..",Toast.LENGTH_SHORT).show();
+        }
+        else {
 
             loadingBar.setTitle("Creating New Account");
             loadingBar.setMessage("Wait, while creating new account...");

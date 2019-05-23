@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.example.user.sharingcaring.Adapters.RideSharePostModel;
 import com.example.user.sharingcaring.CallDialgue;
+import com.example.user.sharingcaring.ClickPostActivityForDelete.MirpurDelete;
 import com.example.user.sharingcaring.ExpnadablePlaceName.Jatrabari;
 import com.example.user.sharingcaring.ExpnadablePlaceName.Mirpur;
 import com.example.user.sharingcaring.R;
@@ -68,6 +69,9 @@ public class MirpurRidePosts extends AppCompatActivity {
                         (RideSharePostModel.class,R.layout.ride_share_post_layout,MirpurRidePostViewHolder.class,postRef) {
                     @Override
                     protected void populateViewHolder(MirpurRidePostViewHolder viewHolder, final RideSharePostModel model, int position) {
+
+                        final String postKey=getRef(position).getKey();
+
                         viewHolder.setAboutRide(model.getAboutRide());
                         viewHolder.setRideTime(model.getRideTime());
                         viewHolder.setPhoneNumber(model.getPhoneNumber());
@@ -80,9 +84,8 @@ public class MirpurRidePosts extends AppCompatActivity {
                         viewHolder.mView.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                Intent intent=new Intent(Intent.ACTION_DIAL);
-                                String number=model.getPhoneNumber().toString();
-                                intent.setData(Uri.parse("tel:"+number));
+                                Intent intent=new Intent(MirpurRidePosts.this,MirpurDelete.class);
+                                intent.putExtra("PostKey",postKey);
                                 startActivity(intent);
                             }
                         });

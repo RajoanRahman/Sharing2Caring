@@ -91,9 +91,13 @@ public class Donate extends AppCompatActivity {
                         viewHolder.mView.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                Intent newIntent=new Intent(Donate.this,DonateDeletePost.class);
+                                /*Intent newIntent=new Intent(Donate.this,DonateDeletePost.class);
                                 newIntent.putExtra("PostKey",postKey);
-                                startActivity(newIntent);
+                                startActivity(newIntent);*/
+                                Intent intent=new Intent(Intent.ACTION_DIAL);
+                                String number=model.getCellNumber().toString();
+                                intent.setData(Uri.parse("tel:"+number));
+                                startActivity(intent);
 
                             }
                         });

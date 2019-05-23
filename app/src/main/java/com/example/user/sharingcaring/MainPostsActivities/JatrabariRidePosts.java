@@ -14,6 +14,8 @@ import android.widget.TextView;
 
 import com.example.user.sharingcaring.Adapters.RideSharePostModel;
 import com.example.user.sharingcaring.CallDialgue;
+import com.example.user.sharingcaring.ClickPostActivityForDelete.DhanmondiDelete;
+import com.example.user.sharingcaring.ClickPostActivityForDelete.JatrabariDelete;
 import com.example.user.sharingcaring.ExpnadablePlaceName.Dhanmondi;
 import com.example.user.sharingcaring.ExpnadablePlaceName.Jatrabari;
 import com.example.user.sharingcaring.R;
@@ -70,6 +72,8 @@ public class JatrabariRidePosts extends AppCompatActivity {
                     @Override
                     protected void populateViewHolder(JatrabariRidePostViewHolder viewHolder, final RideSharePostModel model, int position) {
 
+                        final String postKey=getRef(position).getKey();
+
                         viewHolder.setAboutRide(model.getAboutRide());
                         viewHolder.setRideTime(model.getRideTime());
                         viewHolder.setPhoneNumber(model.getPhoneNumber());
@@ -82,10 +86,10 @@ public class JatrabariRidePosts extends AppCompatActivity {
                         viewHolder.mView.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                Intent intent=new Intent(Intent.ACTION_DIAL);
-                                String number=model.getPhoneNumber().toString();
-                                intent.setData(Uri.parse("tel:"+number));
+                                Intent intent=new Intent(JatrabariRidePosts.this,JatrabariDelete.class);
+                                intent.putExtra("PostKey",postKey);
                                 startActivity(intent);
+
                             }
                         });
                     }

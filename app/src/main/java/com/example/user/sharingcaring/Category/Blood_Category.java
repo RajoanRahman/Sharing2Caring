@@ -1,10 +1,14 @@
 package com.example.user.sharingcaring.Category;
 
 import android.content.Intent;
+import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.view.animation.GridLayoutAnimationController;
 import android.widget.AdapterView;
 import android.widget.GridView;
 
@@ -24,7 +28,7 @@ public class Blood_Category extends AppCompatActivity {
 
     String[] groups_name={"A+","AB+","O+","O-","B+","B-"};
     Toolbar toolbar;
-
+    Animation anim;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +42,10 @@ public class Blood_Category extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         gridView=findViewById(R.id.blood_category_gridView);
+
+        Animation animation=AnimationUtils.loadAnimation(this,R.anim.animforbuttontwo);
+        GridLayoutAnimationController controller=new GridLayoutAnimationController(animation,.2f,.2f);
+        gridView.setLayoutAnimation(controller);
 
         Blood_Category_Adapter blood_category_adapter=new Blood_Category_Adapter(groups_name,this);
 
